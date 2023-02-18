@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { DataTableComponent } from './data-table.component';
 
-import { DragulaModule } from 'ng2-dragula';
+// import { DragulaModule } from 'ng2-dragula';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { DragulaModule } from 'ng2-dragula';
   ],
   imports: [
     BrowserModule,
-    DragulaModule.forRoot()
+    // DragulaModule.forRoot()
   ],
   exports: [
     DataTableComponent

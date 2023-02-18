@@ -5,7 +5,7 @@
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0",
     "bootstrap": "^4.3.1",
-   "ng2-dragula": "^2.1.1"
+    "ng2-dragula": "^3.2.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

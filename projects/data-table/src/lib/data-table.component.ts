@@ -7,13 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
       <div class="p-5 m-5">
       <div class="table-responsive table-container">
         <table class="table">
-          <thead class="thead-dark">
+         <!--  <thead class="thead-dark">
             <tr dragula="table_columns" [(dragulaModel)]="columns">
               <th *ngFor="let column of columns">
                 {{column}}
               </th>
             </tr>
-          </thead>
+          </thead> -->
           <tbody>
             <tr *ngFor="let row of rows">
               <td *ngFor="let column of columns">
