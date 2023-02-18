@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-all": "ng build DataHeader && ng build DataTable",
+    "build-all-prod": "ng build DataHeader --prod && ng build DataTable --prod"
   },
   "private": true,
   "dependencies": {
