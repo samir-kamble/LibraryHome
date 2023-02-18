@@ -1,0 +1,68 @@
+<!-- Desktop Menu and header items-->
+
+
+
+
+
+
+<!--Left Sidebar-->
+  <p-sidebar [(visible)]="display" [transitionOptions]="'300ms'">
+    <ng-template pTemplate="header">Header Content</ng-template>
+    <ng-template pTemplate="content">
+      <p-panelMenu [model]="menuItems"></p-panelMenu>
+    </ng-template>
+    <ng-template pTemplate="footer">Footer Content</ng-template>
+  </p-sidebar>
+
+<!--Right Sidebar-->
+  <p-sidebar [(visible)]="displayr" [transitionOptions]="'300ms'"  position="right">
+    <ng-template pTemplate="header">Header Content</ng-template>
+    <ng-template pTemplate="content">
+      <p-panelMenu [model]="menuItems"></p-panelMenu>
+    </ng-template>
+    <ng-template pTemplate="footer">Footer Content</ng-template>
+  </p-sidebar>
+
+  <!--Top Sidebar-->
+  <p-sidebar [(visible)]="displayt" [transitionOptions]="'300ms'"  position="top">
+    
+    <ng-template pTemplate="content">
+      Search goes here
+    </ng-template>
+    
+  </p-sidebar>
+
+  <p-menu [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'300ms'" #menu [popup]="true" [model]="userItems"></p-menu>
+
+
+<div class="bg-gray-900 py-3 px-4 shadow-2 relative lg:static border-bottom-1 border-gray-800" style="min-height: 80px;">
+
+    <div class="grid">
+        <div class="col-fixed pb-0" style="width:200px">
+            <!-- Mobile Menu trigger button hidden on desktop resolutions -->
+            <button pButton type="button" icon="pi pi-bars" (click)="display = true" class="hidden-lg hidden-md p-button-plain p-button-text"></button>
+
+            <img src="assets/images/blocks/logos/hyper-300.svg" alt="Image" height="40" class="mr-0 mt-2">
+        </div>
+        <div class="col pb-0">
+            <div class="grid">
+                <div class="col-12 lg:col-9 pb-0">
+                    <div class="align-items-center flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full bg-gray-900 left-0 top-100 z-1 shadow-2 lg:shadow-none border-1 lg:border-none border-gray-800">
+                        <p-megaMenu [model]="megaMenuitems"></p-megaMenu>
+                    </div>
+                </div>
+                <div class="col-12 lg:col-3 pb-0 text-right">
+                    <button pButton type="button" icon="pi pi-search" (click)="displayt = true" class="p-button-plain p-button-text"></button>
+                    <button type="button" pButton icon="pi pi-user" (click)="menu.toggle($event)" class="p-button-plain p-button-text"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Right Sidebar trigger-->
+    <!-- <button pButton type="button" icon="pi pi-bars" (click)="displayr = true" class="hidden-lg hidden-md p-button-sm p-button-secondary"></button> -->
+    
+</div>
+
+
+<p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
