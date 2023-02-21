@@ -7,6 +7,25 @@ import {MegaMenuItem,MenuItem} from 'primeng/api';
   templateUrl: './data-header.component.html',
   styles: [`
 
+    :host ::ng-deep .p-sidebar-footer{
+        background:var(--gray-600);
+        color:  var(--surface-c);
+    }
+
+    :host ::ng-deep .p-sidebar-header{
+        background:var(--gray-900);
+        color:  var(--surface-c);
+    }
+
+    :host ::ng-deep .p-sidebar .p-sidebar-header .p-sidebar-close{
+        color:  var(--surface-c);
+    }
+
+    :host ::ng-deep .p-sidebar .p-sidebar-content{
+        padding-top: 1.25rem;
+        height: 100vh;
+    }
+
     ::ng-deep .p-panelmenu .p-panelmenu-header-link:focus,
     ::ng-deep button.p-button:focus {
         box-shadow: none !important;

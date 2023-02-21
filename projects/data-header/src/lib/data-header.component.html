@@ -1,68 +1,95 @@
-<!-- Desktop Menu and header items-->
-
-
-
-
-
-
 <!--Left Sidebar-->
-  <p-sidebar [(visible)]="display" [transitionOptions]="'300ms'">
-    <ng-template pTemplate="header">Header Content</ng-template>
-    <ng-template pTemplate="content">
-      <p-panelMenu [model]="menuItems"></p-panelMenu>
-    </ng-template>
-    <ng-template pTemplate="footer">Footer Content</ng-template>
-  </p-sidebar>
+<p-sidebar [(visible)]="display" [transitionOptions]="'300ms'">
+  <ng-template pTemplate="header">Header Content</ng-template>
+  <ng-template pTemplate="content">
+    <p-panelMenu [model]="menuItems"></p-panelMenu>
+  </ng-template>
+  <ng-template pTemplate="footer">Footer Content</ng-template>
+</p-sidebar>
 
-<!--Right Sidebar-->
-  <p-sidebar [(visible)]="displayr" [transitionOptions]="'300ms'"  position="right">
-    <ng-template pTemplate="header">Header Content</ng-template>
-    <ng-template pTemplate="content">
-      <p-panelMenu [model]="menuItems"></p-panelMenu>
-    </ng-template>
-    <ng-template pTemplate="footer">Footer Content</ng-template>
-  </p-sidebar>
-
-  <!--Top Sidebar-->
-  <p-sidebar [(visible)]="displayt" [transitionOptions]="'300ms'"  position="top">
-    
-    <ng-template pTemplate="content">
-      Search goes here
-    </ng-template>
-    
-  </p-sidebar>
-
-  <p-menu [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'300ms'" #menu [popup]="true" [model]="userItems"></p-menu>
-
-
-<div class="bg-gray-900 py-3 px-4 shadow-2 relative lg:static border-bottom-1 border-gray-800" style="min-height: 80px;">
-
-    <div class="grid">
-        <div class="col-fixed pb-0" style="width:200px">
-            <!-- Mobile Menu trigger button hidden on desktop resolutions -->
-            <button pButton type="button" icon="pi pi-bars" (click)="display = true" class="hidden-lg hidden-md p-button-plain p-button-text"></button>
-
-            <img src="assets/images/blocks/logos/hyper-300.svg" alt="Image" height="40" class="mr-0 mt-2">
-        </div>
-        <div class="col pb-0">
-            <div class="grid">
-                <div class="col-12 lg:col-9 pb-0">
-                    <div class="align-items-center flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full bg-gray-900 left-0 top-100 z-1 shadow-2 lg:shadow-none border-1 lg:border-none border-gray-800">
-                        <p-megaMenu [model]="megaMenuitems"></p-megaMenu>
-                    </div>
-                </div>
-                <div class="col-12 lg:col-3 pb-0 text-right">
-                    <button pButton type="button" icon="pi pi-search" (click)="displayt = true" class="p-button-plain p-button-text"></button>
-                    <button type="button" pButton icon="pi pi-user" (click)="menu.toggle($event)" class="p-button-plain p-button-text"></button>
-                </div>
-            </div>
-        </div>
+<!--Right menu bar-->
+<p-overlayPanel #op [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'300ms'">
+  <ng-template pTemplate>
+    <div class="flex flex-wrap">
+      <div class="w-4 flex flex-column align-items-center p-3"><button pbutton="" icon="pi pi-image" pripple=""
+          class="p-ripple p-element p-button-rounded mb-2 p-button p-component p-button-icon-only"><span
+            class="p-button-icon pi pi-image" aria-hidden="true"></span><span class="p-ink"
+            style="height: 39px; width: 39px; top: 5.5px; left: -9.90625px;"></span></button><span>Products</span></div>
+      <div class="w-4 flex flex-column align-items-center p-3"><button pbutton="" icon="pi pi-file-pdf" pripple=""
+          class="p-ripple p-element p-button-rounded mb-2 p-button-success p-button p-component p-button-icon-only"><span
+            class="p-button-icon pi pi-file-pdf" aria-hidden="true"></span><span
+            class="p-ink"></span></button><span>Reports</span></div>
+      <div class="w-4 flex flex-column align-items-center p-3"><button pbutton="" icon="pi pi-dollar" pripple=""
+          class="p-ripple p-element p-button-rounded mb-2 p-button-secondary p-button p-component p-button-icon-only"><span
+            class="p-button-icon pi pi-dollar" aria-hidden="true"></span><span
+            class="p-ink"></span></button><span>Balance</span></div>
+      <div class="w-4 flex flex-column align-items-center p-3"><button pbutton="" icon="pi pi-cog" pripple=""
+          class="p-ripple p-element p-button-rounded mb-2 p-button-warning p-button p-component p-button-icon-only"><span
+            class="p-button-icon pi pi-cog" aria-hidden="true"></span><span
+            class="p-ink"></span></button><span>Settings</span></div>
+      <div class="w-4 flex flex-column align-items-center p-3"><button pbutton="" icon="pi pi-key" pripple=""
+          class="p-ripple p-element p-button-rounded mb-2 p-button-help p-button p-component p-button-icon-only"><span
+            class="p-button-icon pi pi-key" aria-hidden="true"></span><span
+            class="p-ink"></span></button><span>Credentials</span></div>
+      <div class="w-4 flex flex-column align-items-center p-3"><button pbutton="" icon="pi pi-sitemap" pripple=""
+          class="p-ripple p-element p-button-rounded mb-2 p-button-info p-button p-component p-button-icon-only"><span
+            class="p-button-icon pi pi-sitemap" aria-hidden="true"></span><span
+            class="p-ink"></span></button><span>Sitemap</span></div>
     </div>
+    <!-- <div class="grid">
+      <div class="shadow-3 col-12 md:col-6 lg:col-3">A</div>
+      <div class="shadow-3 col-12 md:col-6 lg:col-3">B</div>
+      <div class="shadow-3 col-12 md:col-6 lg:col-3">C</div>
+      <div class="shadow-3 col-12 md:col-6 lg:col-3">D</div>
+    </div> -->
+  </ng-template>
+</p-overlayPanel>
 
-    <!--Right Sidebar trigger-->
-    <!-- <button pButton type="button" icon="pi pi-bars" (click)="displayr = true" class="hidden-lg hidden-md p-button-sm p-button-secondary"></button> -->
-    
+<!--Top Sidebar-->
+<p-sidebar [(visible)]="displayt" [transitionOptions]="'300ms'" position="top">
+
+  <ng-template pTemplate="content">
+    Search goes here
+  </ng-template>
+
+</p-sidebar>
+
+<p-menu [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'300ms'" #menu [popup]="true"
+  [model]="userItems"></p-menu>
+
+
+<div class="bg-gray-900 py-3 px-4 shadow-2 relative lg:static border-bottom-1 border-gray-800"
+  style="min-height: 80px;">
+
+  <div class="grid">
+    <div class="col-fixed pb-0" style="width:200px">
+      <!-- Mobile Menu trigger button hidden on desktop resolutions -->
+      <button pButton type="button" icon="pi pi-align-justify" (click)="display = true"
+        class="hidden-lg hidden-md p-button-plain p-button-text p-button-rounded p-button-lg"></button>
+
+      <img src="assets/images/blocks/logos/hyper-300.svg" alt="Image" height="40" class="mr-0 mt-2">
+    </div>
+    <div class="col pb-0">
+      <div class="grid">
+        <div class="col-12 lg:col-9 pb-0">
+          <div
+            class="align-items-center flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full bg-gray-900 left-0 top-100 z-1 shadow-2 lg:shadow-none border-1 lg:border-none border-gray-800">
+            <p-megaMenu [model]="megaMenuitems"></p-megaMenu>
+          </div>
+        </div>
+        <div class="col-12 lg:col-3 pb-0 text-right">
+          <button pButton type="button" icon="pi pi-search" (click)="displayt = true"
+            class="p-button-plain p-button-text p-button-rounded p-button-lg sm:p-button-md"></button>
+          <button type="button" pButton icon="pi pi-user" (click)="menu.toggle($event)"
+            class="p-button-plain p-button-text p-button-rounded p-button-lg sm:p-button-md"></button>
+          <button pButton type="button" icon="pi pi-th-large" (click)="op.toggle($event)"
+            class="p-button-plain p-button-text p-button-rounded p-button-lg sm:p-button-md"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
-<p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+<!-- <p-breadcrumb [model]="items"></p-breadcrumb> -->

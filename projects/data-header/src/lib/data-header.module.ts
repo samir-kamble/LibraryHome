@@ -11,6 +11,7 @@ import {SidebarModule} from 'primeng/sidebar';
 import {PanelMenuModule} from 'primeng/panelmenu';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {MenuModule} from 'primeng/menu';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
 
 import {StyleClassModule} from 'primeng/styleclass';
 
@@ -28,7 +29,8 @@ import {StyleClassModule} from 'primeng/styleclass';
     StyleClassModule,
     BreadcrumbModule,
     SlideMenuModule,
-    MenuModule
+    MenuModule,
+    OverlayPanelModule
   ],
   exports: [
     DataHeaderComponent

@@ -146,27 +146,26 @@ export class AppComponent {
     this.fillTable();
   }
 
-  private fillTable() {
-    this.columns = [];
+    private fillTable() {
+        this.columns = [];
 
-    const row = {};
-    for (let i = 0; i < 10; i++) {
-      const columnLabel = 'Column_' + (i + 1);
-      this.columns.push(columnLabel);
-      
+        const row = {};
+        for (let i = 0; i < 10; i++) {
+            const columnLabel = 'Column_' + (i + 1);
+            this.columns.push(columnLabel);
+        }
+
+        this.rows = [{
+            "Column_1": 1,
+            "Column_2": 1,
+            "Column_3": 1,
+            "Column_4": 1,
+            "Column_5": 1,
+            "Column_6": 1,
+            "Column_7": 1,
+            "Column_8": 8,
+            "Column_9": 1,
+            "Column_10": 1,
+        }];
     }
-
-    this.rows = [{
-      "Column_1": 1,
-      "Column_2": 1,
-      "Column_3": 1,
-      "Column_4": 1,
-      "Column_5": 1,
-      "Column_6": 1,
-      "Column_7": 1,
-      "Column_8": 8,
-      "Column_9": 1,
-      "Column_10": 1,
-    }];
-  }
 }
