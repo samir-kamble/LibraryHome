@@ -36,12 +36,50 @@
             class="p-button-icon pi pi-sitemap" aria-hidden="true"></span><span
             class="p-ink"></span></button><span>Sitemap</span></div>
     </div>
-    <!-- <div class="grid">
-      <div class="shadow-3 col-12 md:col-6 lg:col-3">A</div>
-      <div class="shadow-3 col-12 md:col-6 lg:col-3">B</div>
-      <div class="shadow-3 col-12 md:col-6 lg:col-3">C</div>
-      <div class="shadow-3 col-12 md:col-6 lg:col-3">D</div>
-    </div> -->
+  </ng-template>
+</p-overlayPanel>
+
+<p-overlayPanel #not [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'300ms'">
+  <ng-template pTemplate>
+    <ul class="list-none p-0 m-0">
+      <li class="px-3 py-1"><span>You have <b>4</b> new notifications</span></li>
+      <li class="p-3">
+        <div class="flex align-items-center"><img src="assets/demo/images/avatar/avatar-1.png">
+          <div class="flex flex-column ml-3 flex-1">
+            <div class="flex align-items-center justify-content-between mb-1"><span class="font-bold">Jerome
+                Bell</span><small>42 mins ago</small></div><span class="text-sm line-height-3">How to write content
+              about your photographs?</span>
+          </div>
+        </div>
+      </li>
+      <li class="p-3">
+        <div class="flex align-items-center"><img src="assets/demo/images/avatar/avatar-2.png">
+          <div class="flex flex-column ml-3 flex-1">
+            <div class="flex align-items-center justify-content-between mb-1"><span class="fs-small font-bold">Cameron
+                Williamson</span><small>48 mins ago</small></div><span class="text-sm line-height-3">Start a blog to
+              reach your creative peak.</span>
+          </div>
+        </div>
+      </li>
+      <li class="p-3">
+        <div class="flex align-items-center"><img src="assets/demo/images/avatar/avatar-3.png">
+          <div class="flex flex-column ml-3 flex-1">
+            <div class="flex align-items-center justify-content-between mb-1"><span class="fs-small font-bold">Anna
+                Miles</span><small>1 day ago</small></div><span class="text-sm line-height-3">Caring is the new
+              marketing</span>
+          </div>
+        </div>
+      </li>
+      <li class="p-3">
+        <div class="flex align-items-center"><img src="assets/demo/images/avatar/avatar-4.png">
+          <div class="flex flex-column ml-3 flex-1">
+            <div class="flex align-items-center justify-content-between mb-1"><span class="fs-small font-bold">Arlene
+                Mccoy</span><small>4 day ago</small></div><span class="text-sm line-height-3">Starting your traveling
+              blog with Vasco.</span>
+          </div>
+        </div>
+      </li>
+    </ul>
   </ng-template>
 </p-overlayPanel>
 
@@ -83,6 +121,8 @@
           <button type="button" pButton icon="pi pi-user" (click)="menu.toggle($event)"
             class="p-button-plain p-button-text p-button-rounded p-button-lg sm:p-button-md"></button>
           <button pButton type="button" icon="pi pi-th-large" (click)="op.toggle($event)"
+            class="p-button-plain p-button-text p-button-rounded p-button-lg sm:p-button-md"></button>
+          <button pButton type="button" icon="pi pi-bell" (click)="not.toggle($event)"
             class="p-button-plain p-button-text p-button-rounded p-button-lg sm:p-button-md"></button>
         </div>
       </div>
